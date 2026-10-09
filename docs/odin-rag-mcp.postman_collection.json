@@ -1,0 +1,111 @@
+{
+  "info": {
+    "name": "Odin RAG MCP API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection for testing health, RAG ingestion, MCP operations and chat flow."
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8001/health",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "Providers",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8001/providers",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["providers"]
+        }
+      }
+    },
+    {
+      "name": "Chat",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"Qual é a finalidade do Odin?\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8001/chat",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["chat"]
+        }
+      }
+    },
+    {
+      "name": "MCP Ingest",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"method\": \"ingest\",\n  \"params\": {\n    \"documents\": [\n      \"Odin é um agente de IA open source pensado para ingestão de documentação e recuperação contextualizada.\",\n      \"A plataforma aceita qualquer modelo de IA compatível e permite buscar respostas com base em documentos locais.\"\n    ]\n  }\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8001/mcp",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["mcp"]
+        }
+      }
+    },
+    {
+      "name": "MCP Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"method\": \"query\",\n  \"params\": {\n    \"question\": \"Qual é a finalidade do Odin?\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8001/mcp",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["mcp"]
+        }
+      }
+    },
+    {
+      "name": "Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8001/metrics",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8001",
+          "path": ["metrics"]
+        }
+      }
+    }
+  ]
+}
