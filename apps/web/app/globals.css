@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(96, 165, 250, 0.25), transparent 35%),
+    linear-gradient(135deg, #020817 0%, #0f172a 35%, #111827 100%);
+  color: #e2e8f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, textarea {
+  font: inherit;
+}
+
+.page-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+  backdrop-filter: blur(10px);
+}
+
+.hero-panel {
+  padding: 32px 28px;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(14, 116, 144, 0.8));
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-panel h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+.hero-panel p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 760px;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.chat-form {
+  display: grid;
+  gap: 14px;
+}
+
+.chat-form label {
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.chat-form textarea {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 16px;
+  resize: vertical;
+  background: rgba(15, 23, 42, 0.8);
+  color: #f8fafc;
+  padding: 18px;
+  min-height: 150px;
+}
+
+.chat-form textarea::placeholder {
+  color: rgba(148, 163, 184, 0.8);
+}
+
+.chat-form button {
+  width: fit-content;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: white;
+  font-weight: 700;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+.chat-form button:hover {
+  transform: translateY(-1px);
+}
+
+.answer-panel h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.answer-panel p {
+  margin: 0;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  color: #dbeafe;
+}
